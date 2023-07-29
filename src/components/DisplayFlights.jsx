@@ -17,22 +17,29 @@ const DisplayFlights = () => {
       };
       
     return (
+        <Row xs={1} md={4} className="g-4">
         <div className="flight-container">
-            {displayFlights.map((data,i) => {
+            {displayFlights.map((data, i) => {
                 return (
-                    <div key = {i} className="flight-card">
-                        <h1>Airline: {data.carrier_code}{data.flight_number}</h1>
-                        <p>From: {data.departure_location}</p>
-                        <p>Departure Date: {convertTime(data.departure_date)}</p>
-                        <p>To: {data.arrival_location}</p>
+                    <Col>
+                        <Card key={i} className="flight-card" >
+                            <Card.Body>
+                                <Card.Title class='Airline'>Airline : {data.carrier_code}&nbsp;{data.flight_number}</Card.Title>
+                            </Card.Body>
+                            <Card.Text>
+                            <p>From: {data.departure_location}</p>
+                            <p>Departure Date: {convertTime(data.departure_date)}</p>
+                            <p>To: {data.arrival_location}</p>
                         <p>Arrival Date: {convertTime(data.arrival_date)}</p>
-                        <p>Emissions: {data.emissions}</p>
-                        {/* <Weather destination= {data.arrival_location}/> */}
-                        {/* <Link to = "/weather" state={{destination:data.arrival_location}}>show weather</Link> */}
-                    </div>
-                )
+                            </Card.Text>
+                            <hr />
+                            <Button onClick={() => deleteFlight(data.id)}>X</Button>
+                        </Card>
+                    </Col>
+                );
             })}
         </div>
+        </Row>
     )
 }
 
