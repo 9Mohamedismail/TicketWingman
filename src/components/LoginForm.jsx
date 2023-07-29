@@ -41,16 +41,22 @@ const LoginForm = () => {
     <div id="formContainer">
       {errorMessage && <h1 id="errorLogin">{errorMessage}</h1>}
       <h1 id="formHeading">Login</h1>
-      <div class="d-grid gap-2 col-6 mx-auto">
+      <div className="d-grid gap-2 col-6 mx-auto">
         <a
-          href="http://localhost:8080/auth/google"
+          href="https://ticket-wing-man-backend.vercel.app/
+auth/google"
           type="button"
-          class="btn btn-primary btn-lg"
+          className="btn btn-primary btn-lg"
         >
           <img src={Google} alt="" className="google-button-icon" />
           <label className="google-button-text"> Login with Google</label>
         </a>
-        <a href="http://localhost:8080/auth/github" type="button" class="btn btn-primary btn-lg">
+        <a
+          href="https://ticket-wing-man-backend.vercel.app/
+auth/github"
+          type="button"
+          className="btn btn-primary btn-lg"
+        >
           <img src={Github} alt="" className="google-button-icon" />
           <label className="google-button-text"> Login with Github</label>
         </a>
@@ -62,37 +68,37 @@ const LoginForm = () => {
         </div>
       </div>
       <form onSubmit={handleSubmit}>
-        <div class="form-floating mb-3">
+        <div className="form-floating mb-3">
           <input
             type="email"
             id="inputEmail"
-            class="form-control"
+            className="form-control"
             placeholder="name@example.com"
             name="email"
             required
           />
-          <label for="floatingInput">Email</label>
+          <label htmlFor="floatingInput">Email</label>
         </div>
-        <div class="form-floating mb-3">
+        <div className="form-floating mb-3">
           <input
             type="password"
             id="inputPassword"
-            class="form-control"
+            className="form-control"
             placeholder="Password"
             name="password"
             required
           />
-          <label for="floatingInput">Password</label>
+          <label htmlFor="floatingInput">Password</label>
         </div>
         <Link
           to="/forgot"
           id="forgotPasswordNav"
-          class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+          className="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
         >
           Forgot Password?
         </Link>
-        <div class="d-grid gap-2 col-6 mx-auto">
-          <button type="submit" class="btn btn-primary btn-lg">
+        <div className="d-grid gap-2 col-6 mx-auto">
+          <button type="submit" className="btn btn-primary btn-lg">
             Login
           </button>
         </div>
@@ -100,7 +106,7 @@ const LoginForm = () => {
       <Link
         to="/signup"
         id="signupNav"
-        class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+        className="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
       >
         New? Sign Up
       </Link>

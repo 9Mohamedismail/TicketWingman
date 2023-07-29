@@ -56,7 +56,7 @@ function EmissionCalculator() {
             onChange={(e) => setEmission(e.target.value)}
           />
           <button
-            className="btn btn-primary"
+            className="btn btn-primary btn-color"
             type="submit"
             id="emissionButton"
             onClick={handleConvert}

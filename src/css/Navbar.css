@@ -1,0 +1,12 @@
+.navbar-dark {
+  background: #21317c;
+  opacity: 1;
+}
+
+.navbar a {
+  color: #fff;
+}
+
+.logoNav {
+  width: 40px;
+}

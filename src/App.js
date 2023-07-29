@@ -16,8 +16,12 @@ import Emission from "./pages/Emission";
 import { me } from "./redux/users/user.actions";
 import { logout } from "./redux/users/user.actions";
 import Weather from "./pages/Weather";
+import Track from "./pages/Track";
 import UserFlights from "./pages/UserFlights";
 import InsertFlight from "./pages/InsertFlight";
+import LoadingPage from "./components/LoadingPage";
+import "./css/Navbar.css";
+import logo from "./assets/ticketwingman_colornav.png";
 
 function App() {
   const dispatch = useDispatch();
@@ -40,7 +44,8 @@ function App() {
   return (
     <div className="App">
       {/* Navigation */}
-      <nav className="navbar navbar-expand-lg navbar-dark p-3 bg-danger">
+      <nav className="navbar navbar-expand-lg navbar-dark p-3">
+        <img src={logo} className="logoNav" />
         <ul className="navbar-nav mx-auto">
           {isLoggedIn ? (
             <li className="nav-item">
@@ -66,21 +71,8 @@ function App() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/emission" className="nav-link mx-2">
-                  Emission Calculator
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/weather"
-                  state={{
-                    destination: "JFK",
-                    startingDate: "2023-09-01",
-                    endingDate: "2023-12-30",
-                    tempF: true,
-                  }}
-                >
-                  weather
+                <Link to="/track" className="nav-link mx-2">
+                  Track
                 </Link>
               </li>
             </>
@@ -96,6 +88,13 @@ function App() {
             <li className="nav-item">
               <Link to="/userflights" className="nav-link mx-2">
                 User's Flights
+              </Link>
+            </li>
+          )}
+          {isLoggedIn && (
+            <li className="nav-item">
+              <Link to="/track" className="nav-link mx-2">
+                Track
               </Link>
             </li>
           )}
@@ -124,7 +123,9 @@ function App() {
         <Route path="/searchResults" element={<SearchResults />} />
         <Route path="/weather" element={<Weather />} />
         <Route path="/emission" element={<Emission />} />
+        <Route path="/track" element={<Track />} />
         <Route path="/newFlights" element={<InsertFlight />} />
+        <Route path="/LoadingPage" element={<LoadingPage />} />
       </Routes>
     </div>
   );

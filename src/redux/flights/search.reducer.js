@@ -4,6 +4,7 @@ import {
   SEARCH_FLIGHTS_FAILURE,
   DISPLAY_USER_FLIGHTS,
   INSERT_USER_FLIGHTS,
+  DELETE_USER_FLIGHTS
 } from "./search.types";
 
 const initialState = {
@@ -48,6 +49,11 @@ const searchReducer = (state = initialState, action) => {
       return {
         ...state,
         insertedFlight: action.payload
+      }
+    case DELETE_USER_FLIGHTS:
+      return{
+        ...state,
+        userFlights: action.payload
       }
     default:
       return state;

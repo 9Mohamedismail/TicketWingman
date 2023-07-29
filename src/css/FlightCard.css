@@ -1,0 +1,114 @@
+#flightDataContainer {
+  border: solid;
+  border-width: thin;
+  width: 1200px;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+#flightDataHeading {
+  border: solid;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.timeContainers {
+  display: flex;
+}
+
+.flightNumber {
+  margin-right: auto;
+}
+
+.flightInfo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flightIcon {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flightStatus {
+  border: solid;
+  justify-content: center;
+  padding: 20px;
+  margin-left: auto;
+}
+
+.scheduledFlight {
+  background-color: yellow;
+}
+
+.activeFlight {
+  background-color: green;
+}
+
+.landedFlight {
+  background-color: gray;
+}
+
+#DepartureContainer,
+#ArrivalContainer {
+  border: solid;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.airportInfo {
+  text-align: center;
+  font-size: 20px;
+}
+
+.smallerTextMargins {
+  margin-bottom: -5px;
+}
+
+.airportTimeInfo {
+  display: flex;
+  text-align: center;
+}
+.scheduleText {
+  font-size: 30px;
+}
+.scheduleTime {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.arrivalTime {
+  margin-left: auto;
+}
+
+.estimateTime {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.infoTable {
+  margin-top: 20px;
+}
+
+.infoTable th {
+  border: solid;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.infoTable td {
+  border: solid;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+}

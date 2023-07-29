@@ -22,10 +22,12 @@ const resetLoginError = () => ({ type: RESET_LOGIN_ERROR });
 
 export const me = (email) => async (dispatch) => {
   try {
-    const res = await axios.post("http://localhost:8080/auth/me", {
-      email,
-      withCredentials: true,
-    });
+    const res = await axios.post(
+      "https://ticket-wing-man-backend.vercel.app/auth/me",
+      {
+        email,
+      }
+    );
     console.log("ME RESPONSE", res.data);
     dispatch(getUser(res.data || defaultUser));
   } catch (err) {
@@ -37,12 +39,15 @@ export const authSignup =
   (firstName, lastName, email, password) => async (dispatch) => {
     let res;
     try {
-      res = await axios.post(`http://localhost:8080/auth/signup`, {
-        firstName,
-        lastName,
-        email,
-        password,
-      });
+      res = await axios.post(
+        `https://ticket-wing-man-backend.vercel.app/auth/signup`,
+        {
+          firstName,
+          lastName,
+          email,
+          password,
+        }
+      );
     } catch (authError) {
       return dispatch(getUser({ error: authError }));
     }
@@ -58,10 +63,13 @@ export const authSignup =
 export const authLogin = (email, password) => async (dispatch) => {
   let res;
   try {
-    res = await axios.post(`http://localhost:8080/auth/login`, {
-      email,
-      password,
-    });
+    res = await axios.post(
+      `https://ticket-wing-man-backend.vercel.app/auth/login`,
+      {
+        email,
+        password,
+      }
+    );
   } catch (authError) {
     return dispatch(loginError(authError.message));
   }
@@ -76,7 +84,7 @@ export const authLogin = (email, password) => async (dispatch) => {
 
 export const logout = () => async (dispatch) => {
   try {
-    await axios.post("http://localhost:8080/auth/logout");
+    await axios.post("https://ticket-wing-man-backend.vercel.app/auth/logout");
     dispatch(removeUser());
   } catch (err) {
     console.error(err);
@@ -87,7 +95,7 @@ export const editUserThunk = (userEmail, updates) => {
   return async (dispatch) => {
     try {
       const response = await axios.put(
-        `http://localhost:8080/api/user/${userEmail}`,
+        `https://ticket-wing-man-backend.vercel.app/api/user/${userEmail}`,
         updates
       );
       dispatch(editUser(userEmail, { updates: response.data }));

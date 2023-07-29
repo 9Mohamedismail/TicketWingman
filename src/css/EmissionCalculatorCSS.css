@@ -1,17 +1,19 @@
 #emissionField {
   display: grid;
   justify-content: center;
-  width: 35%;
+  width: 85%;
   margin: 0 auto;
   margin-top: 20px;
 }
 
 #emissionNumber {
-  border-width: 2px;
-  border-color: black;
+  border-width: 1.5px;
+  border-color: #b5b4b4;
 }
 #emissionContainer {
   border: solid;
+  border-width: 1.25px;
+  border-color: #b5b4b4;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
@@ -41,5 +43,5 @@
 }
 .coEmission {
   font-size: 30px;
-  font-weight: bolder;
+  font-weight: bold;
 }

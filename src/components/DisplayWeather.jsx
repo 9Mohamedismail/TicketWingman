@@ -7,73 +7,86 @@ const DisplayWeather = () => {
   const weather = useSelector((state) => state.weather.weatherTemp);
 
   return (
-    <div style={{width:700}}>
-      {console.log(weather)}
-      {weather.length!==0?
-      (<Line
-        data={{labels: weather.daily.time.map((data) => data), 
-          datasets: [
-            {
-              label: "Rain Sum",
-              data: weather.daily.rain_sum.map((data) => data/10),
-              fill: true,
-              borderColor: 'rgb(75, 192, 192)',
-              // backgroundColor: 'rgba(255, 99, 71, 0.8)',
-              backgroundColor: 'blue',
-              tension: 0.1
-            },
-            {
+    <div style={{ width: 1400 }}>
+      {weather.length !== 0 ? (
+        <Line
+          data={{
+            labels: weather.daily.time.map((data) => data),
+            datasets: [
+              {
+                label: "Rain Sum",
+                data: weather.daily.rain_sum.map((data) => data / 10),
+                fill: true,
+                borderColor: "rgb(75, 192, 192)",
+                // backgroundColor: 'rgba(255, 99, 71, 0.8)',
+                backgroundColor: "blue",
+                tension: 0.1,
+              },
+              {
                 label: "Snowfall Sum",
                 data: weather.daily.snowfall_sum.map((data) => data),
                 fill: true,
-                borderColor: 'rgb(75, 192, 192)',
+                borderColor: "rgb(75, 192, 192)",
                 // backgroundColor: 'rgba(255, 99, 71, 0.8)',
-                backgroundColor: 'pink',
-                tension: 0.1
+                backgroundColor: "pink",
+                tension: 0.1,
               },
-          ]
-        }}
-        options={{
-          maintainAspectRatio: false,
-          plugins: {
-            title: {
-              display: true,
-              text: "Historical Rain and Snowfall Sum"
-            },
-            legend: {
-              display: false
-            }
-          },
-          animations: {
-            tension: {
-              duration: 1000,
-              easing: 'linear',
-              from: 1,
-              to: 0,
-              loop: true
-            }
-          },
-          scales: {
-            x: {
+            ],
+          }}
+          options={{
+            maintainAspectRatio: false,
+            plugins: {
               title: {
                 display: true,
-                text: 'Day'
-              }
+                text: "Historical Rain and Snowfall Sum From Past Year",
+              },
+              legend: {
+                display: false,
+              },
             },
-            y: {
-              // stacked: true,
-              title: {
-                display: true,
-                text: 'cm'
-              }
-            }
-          }      
-        }}
-        width={600}
-        height={400}   
-      />
-      )
-      :(<h1>LOADING...</h1>)}
+            animations: {
+              tension: {
+                duration: 1000,
+                easing: "linear",
+                from: 1,
+                to: 0,
+                loop: true,
+              },
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: "Day",
+                  font: {
+                    family: "Times",
+                    size: 20,
+                    style: "normal",
+                    lineHeight: 1.2,
+                  },
+                },
+              },
+              y: {
+                // stacked: true,
+                title: {
+                  display: true,
+                  text: "Centimeter",
+                  font: {
+                    family: "Times",
+                    size: 20,
+                    style: "normal",
+                    lineHeight: 1.2,
+                  },
+                },
+              },
+            },
+          }}
+          width={600}
+          height={400}
+        />
+      ) : (
+        <h1>LOADING...</h1>
+      )}
     </div>
   );
 };

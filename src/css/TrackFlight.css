@@ -1,0 +1,31 @@
+#trackFlightContainer {
+  border: transparent;
+  display: grid;
+  justify-content: center;
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#trackFlightHeading {
+  font-size: 48px;
+  color: #00a7e1;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#trackFlightMessage {
+  color: #00171f;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#searchButtonTrack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}

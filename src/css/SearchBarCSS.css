@@ -1,8 +1,8 @@
 .search-bar {
   background: white;
-  width: 65%;
+  width: 54%;
   margin: 30px auto;
-  padding: 20px 10px 20px 30px;
+  padding: 20px 30px 20px 30px;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -37,6 +37,8 @@ select {
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 .search-bar button img {

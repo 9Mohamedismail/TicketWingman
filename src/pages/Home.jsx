@@ -4,11 +4,12 @@ import Card from "../components/Card";
 import video from "../assets/video.mp4";
 import videoWebm from "../assets/videoWebm.webm";
 import "../css/Home.css";
+import logo from "../assets/ticketwingman_color.png";
 
 function Home() {
   return (
     <div className="home">
-      {/* <Card /> */}
+      <img src={logo} className="logo" />
       <video muted loop autoPlay>
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag. I suggest you upgrade your
@@ -25,8 +26,7 @@ function Home() {
         <SearchBar />
       </div>
       <div className="card-grid-heading">
-        <h2>Popular Destinations</h2>
-        <h4>Based on your location</h4>
+        <h3>Popular Destinations</h3>
       </div>
       <Card />
     </div>
