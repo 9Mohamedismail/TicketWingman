@@ -18,7 +18,6 @@ const DisplayFlights = () => {
       
     return (
         <Row xs={1} md={4} className="g-4">
-        <div className="flight-container">
             {displayFlights.map((data, i) => {
                 return (
                     <Col>
@@ -38,7 +37,6 @@ const DisplayFlights = () => {
                     </Col>
                 );
             })}
-        </div>
         </Row>
     )
 }
