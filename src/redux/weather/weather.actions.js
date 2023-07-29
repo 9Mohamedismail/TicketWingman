@@ -27,7 +27,7 @@ export const FETCH_WEATHER_F_THUNK = (locationName) => {
     try {
       console.log("fetch weather data in Fahrenheit started");
       const result = await axios.post(
-        "https://ticket-wing-man-backend.vercel.app/api/weather/displayInFahrenheit",
+        "https://ticketwingman-backend.onrender.com/api/weather/displayInFahrenheit",
         { locationName }
       );
       console.log("fetch weather data in Fahrenheit COMPLETED");
@@ -44,7 +44,7 @@ export const FETCH_WEATHER_C_THUNK = (locationName) => {
     try {
       console.log("fetch weather data in Celsius started");
       const result = await axios.post(
-        "https://ticket-wing-man-backend.vercel.app/api/weather/displayInCelsius",
+        "https://ticketwingman-backend.onrender.com/api/weather/displayInCelsius",
         { locationName }
       );
       console.log("fetch weather data in Celsius COMPLETED");

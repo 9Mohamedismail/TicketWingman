@@ -23,7 +23,7 @@ const resetLoginError = () => ({ type: RESET_LOGIN_ERROR });
 export const me = (email) => async (dispatch) => {
   try {
     const res = await axios.post(
-      "https://ticket-wing-man-backend.vercel.app/auth/me",
+      "https://ticketwingman-backend.onrender.com/auth/me",
       {
         email,
       }
@@ -40,7 +40,7 @@ export const authSignup =
     let res;
     try {
       res = await axios.post(
-        `https://ticket-wing-man-backend.vercel.app/auth/signup`,
+        `https://ticketwingman-backend.onrender.com/auth/signup`,
         {
           firstName,
           lastName,
@@ -64,7 +64,7 @@ export const authLogin = (email, password) => async (dispatch) => {
   let res;
   try {
     res = await axios.post(
-      `https://ticket-wing-man-backend.vercel.app/auth/login`,
+      `https://ticketwingman-backend.onrender.com/auth/login`,
       {
         email,
         password,
@@ -84,7 +84,7 @@ export const authLogin = (email, password) => async (dispatch) => {
 
 export const logout = () => async (dispatch) => {
   try {
-    await axios.post("https://ticket-wing-man-backend.vercel.app/auth/logout");
+    await axios.post("https://ticketwingman-backend.onrender.com/auth/logout");
     dispatch(removeUser());
   } catch (err) {
     console.error(err);
@@ -95,7 +95,7 @@ export const editUserThunk = (userEmail, updates) => {
   return async (dispatch) => {
     try {
       const response = await axios.put(
-        `https://ticket-wing-man-backend.vercel.app/api/user/${userEmail}`,
+        `https://ticketwingman-backend.onrender.com/api/user/${userEmail}`,
         updates
       );
       dispatch(editUser(userEmail, { updates: response.data }));

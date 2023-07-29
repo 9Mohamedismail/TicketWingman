@@ -20,7 +20,7 @@ export const updateSearchData = (
 
 export const searchFlights = (requestData) => async (dispatch) => {
   const apiUrl =
-    "https://ticket-wing-man-backend.vercel.app/api/flights/search";
+    "https://ticketwingman-backend.onrender.com/api/flights/search";
   const searchParams = new URLSearchParams(requestData);
   const urlWithParams = `${apiUrl}?${searchParams}`;
 
@@ -72,7 +72,7 @@ export const displayUserFlight = (userID) => {
   return async (dispatch) => {
     try {
       const result =
-        await axios.get(`https://ticket-wing-man-backend.vercel.app/
+        await axios.get(`https://ticketwingman-backend.onrender.com/
 api/flights?id=${userID}`);
       dispatch({ type: DISPLAY_USER_FLIGHTS, payload: result.data });
     } catch (err) {
@@ -91,7 +91,7 @@ export const insertUserFlight = (
   return async (dispatch) => {
     try {
       const result = await axios.post(
-        "https://ticket-wing-man-backend.vercel.app/api/flights/newflight",
+        "https://ticketwingman-backend.onrender.com/api/flights/newflight",
         {
           userEmail,
           carrierCode,
@@ -111,7 +111,7 @@ export const deleteUserFlight = (flightID, userID) => {
   return async (dispatch) => {
     try {
       const result = await axios.post(
-        "https://ticket-wing-man-backend.vercel.app/api/flights/delete",
+        "https://ticketwingman-backend.onrender.com/api/flights/delete",
         { flightID, userID }
       );
       dispatch({ type: DELETE_USER_FLIGHTS, payload: result.data });

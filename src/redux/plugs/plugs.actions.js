@@ -13,7 +13,7 @@ export const FETCH_PLUGS_TYPE_THUNK = (countryCode) => {
   return async (dispatch) => {
     try {
       const result =
-        await axios.get(`https://ticket-wing-man-backend.vercel.app/
+        await axios.get(`https://ticketwingman-backend.onrender.com/
 api/plugs/?counterCode=${countryCode.toUpperCase()}`);
       dispatch(FETCH_PLUGS_TYPE(result.data));
     } catch (err) {
