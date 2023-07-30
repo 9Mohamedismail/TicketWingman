@@ -178,21 +178,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
 ## Acknowledgments
 
-- []()
-- []()
-- []()
+- XiaoLing Huang : https://github.com/shellyh0626
+- Kaifeng Yu : https://github.com/kai2233
+- Yuzhuang Chen : https://github.com/yuzchen7
+- Mohamed Ismail : https://github.com/9Mohamedismail
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
