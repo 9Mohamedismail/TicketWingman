@@ -180,9 +180,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Acknowledgments
 
-- XiaoLing Huang : https://github.com/shellyh0626 : https://www.linkedin.com/in/kaifeng-yu-567643243/
-- Kaifeng Yu : https://github.com/kai2233
-- Yuzhuang Chen : https://github.com/yuzchen7
+- XiaoLing Huang : https://github.com/shellyh0626 : www.linkedin.com/in/xiaolingh
+- Kaifeng Yu : https://github.com/kai2233 : https://www.linkedin.com/in/kaifeng-yu-567643243/
+- Yuzhuang Chen : https://github.com/yuzchen7 : https://github.com/yuzchen7
 - Mohamed Ismail : https://github.com/9Mohamedismail : https://www.linkedin.com/in/mohamedismail8/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
