@@ -12,7 +12,7 @@ export const FETCH_FLIGHT_THUNK = (flightObject) => {
   return async (dispatch) => {
     try {
       const result = await axios.get(
-        "https://ticket-wing-man-backend.vercel.app/api/track/",
+        "https://ticketwingman-backend.onrender.com/api/track/",
         {
           params: flightObject,
         }

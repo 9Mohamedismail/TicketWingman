@@ -81,7 +81,7 @@ const SignupForm = () => {
       </div>
       <div class="d-grid gap-2 col-6 mx-auto">
         <a
-          href="https://ticket-wing-man-backend.vercel.app/
+          href="https://ticketwingman-backend.onrender.com/
 auth/google"
           type="button"
           class="btn btn-primary btn-lg"
@@ -90,7 +90,7 @@ auth/google"
           <label className="google-button-text"> Login with Google</label>
         </a>
         <a
-          href="https://ticket-wing-man-backend.vercel.app/
+          href="https://ticketwingman-backend.onrender.com/
 auth/github"
           type="button"
           class="btn btn-primary btn-lg"
